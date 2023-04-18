@@ -1,0 +1,98 @@
+.selectedComp{
+    color: black;
+}
+.new {
+    width: 1000px;
+    margin: auto;
+   
+
+}
+.border{
+    width: 1135px;
+    height: 115px;
+    margin-top: 114px;
+    border: 1px dotted;
+    margin-left: -5px;
+}
+.Image {
+    margin-left: 8px;
+    margin-top: -6px;
+    margin-bottom: -74px;
+}
+
+.Pic {
+    width: 80px;
+    height: 81px;
+    margin-left: 2px;
+    margin-top: 10px;
+
+}
+
+.first {
+    width: 1008px;
+    height: 71px;
+    padding-top: 17px;
+    border: 1px dotted;
+    margin-left: 114px;
+    background-color: black;
+    text-align: center;
+
+}
+
+
+ul {
+    list-style-type: none;
+    margin-left: 0px;
+    margin-top: 0px;
+   
+    width: 1200;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 3px 5px;
+    text-decoration: none;
+    margin-right: 59px;
+
+}
+
+li a:hover {
+    background-color: orange;
+}
+
+.active {
+    background-color: red;
+}
+
+.second {
+    width: 1135px;
+    height: 46px;
+    padding-top: 372px;
+    border: 1px dotted;
+    margin-left: -5px;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    margin-top: -218px;
+    margin-left: 20px;
+}
+
+/* .span {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 20px;
+} */
+.welcome{
+    width: 100px;
+    height: 100px;
+    margin-top: 1px;
+    margin-left: 20px;
+}

@@ -1,0 +1,51 @@
+<div class="new">
+    <div class="border">
+        <div class="Image">
+            <img src="../assets/pic/book.png" class="Pic">
+        </div>
+        <div class="first">
+    
+            <ul>
+                <li><a class="active" href="/home">Home</a></li>
+                <li><a href="/AboutLib">About Library</a></li>
+                <li><a href="/Rules">Rules&Regulations</a></li>
+                <li><a href="/Register">Register</a></li>
+                <li><a href="/Price">Price Card</a></li>
+                <li><a *ngIf="navigate==false; then yes else no"></a></li>
+                <ng-template #yes>
+                    <a href="/login">Login</a>
+                </ng-template>
+                <ng-template #no>
+                    <a href="/search">Search</a>               
+                </ng-template>
+                
+                <li><a *ngIf="Addbook=='admin'; then ad else add"></a></li>
+                    <ng-template #ad>
+                        <a href="/addbook">AddBook</a>
+                    </ng-template>
+                    <ng-template #add>
+
+                    </ng-template>
+            </ul>
+        </div>
+    </div>
+   
+    <div class="second">
+           <h1 class="header">E-Library Management System</h1>
+           <span class="span">Welcome You All</span><br/>
+           <img src="../assets/pic/welcome.jpg" class="welcome">
+    </div>
+</div><br/>
+
+<ul>
+    <li><a routerLink="/home" routerLinkActive="selectedComp">Home</a></li> 
+    <li><a routerLink="/AboutLib" routerLinkActive="selectedComp">About Library</a></li> 
+    <li><a routerLink="/Rules" routerLinkActive="selectedComp">Rules</a></li> 
+    <li><a routerLink="/Register" routerLinkActive="selectedComp">Register</a></li> 
+    <li><a routerLink="/Price" routerLinkActive="selectedComp">Price Card</a></li> 
+    <li><a routerLink="/login" routerLinkActive="selectedComp">Login</a></li> 
+    <li><a routerLink="/home" routerLinkActive="selectedComp">Home</a></li> 
+    <li><a routerLink="/home" routerLinkActive="selectedComp">Home</a></li> 
+
+</ul>
+<router-outlet></router-outlet>

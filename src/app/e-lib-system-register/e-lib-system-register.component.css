@@ -1,0 +1,63 @@
+.first {
+    width: 1135px;
+    height: 570px;
+    margin: auto;
+    margin-top: 19px;
+    margin-left: 254px;
+    border: 1px dotted;
+    text-align: center;
+}
+.heading{
+    margin-top: 42px;
+    margin-left: -23px;
+}
+.fname{
+    margin-left: 432px;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+.lname{
+    margin-left: 433px;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.email{
+    margin-left: 432px;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+.pass{
+    margin-left: 432px;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+.button{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.btn{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.in1{
+    margin-left: 10px;
+    margin-top: 6px;
+
+}
+.in2{
+    margin-left: 10px;
+    margin-top: 6px;
+}
+.in3{
+    margin-left: 10px;
+    margin-top: 6px;
+}
+.in4{
+    margin-left: 10px;
+    margin-top: 6px;
+}

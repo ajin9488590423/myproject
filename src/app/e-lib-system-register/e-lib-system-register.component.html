@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registe e-lib</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <form [formGroup]="RegisterForm" (ngSubmit)="AddRegister()">
+    <div class="first">
+        <div class="heading">
+            <h1>Sign Up</h1>
+        </div>
+        <div class="fname"> 
+            <label>First Name:</label>
+        </div>
+        <div class="in1">
+            <input type="text" name="fname" placeholder="First name" style="width:238px ;height: 26px;" formControlName="fName">
+        </div>
+        <span style="color: red;" *ngIf="fName && fName.invalid && fName.touched">*The fName field is not valid</span>
+
+        <div class="lname">
+            <label>Last Name:</label>
+        </div>
+        <div class="in2">
+            <input type="text" name="lname" placeholder="Last name" style="width:238px ;height: 26px;" formControlName="lName">
+        </div>
+        <span style="color: red;" *ngIf="lName && lName.invalid && lName.touched">*The lName field is not valid</span>
+
+        <div class="email">
+            <label >Email address:</label>
+        </div>
+        <div class="in3">
+            <input type="email" name="email" placeholder="Enter email" style="width:238px ;height: 26px;" formControlName="email" (click)="ShowInfo()">
+        </div>
+        <span style="color: red;" *ngIf="email && email.invalid && email.touched">*The email field is not valid </span>
+
+        <div class="pass">
+            <label>Password:</label>
+        </div>
+        <div  class="in4">
+            <input type="password" name="password" placeholder="Enter password" style="width:238px ;height: 26px;" formControlName="password">
+        </div>
+        <span style="color: red;" *ngIf="password && password.invalid && password.touched">*The password field is not valid use some special char and number and upper case also lowercase</span>
+
+        <div class="button">
+           <input type="submit" value="Sign Up" class="btn btn-warning" [disabled]="!RegisterForm.valid" (click)="successAlert()" ></div>
+    </div>
+</form>
+</body>
+
+</html>

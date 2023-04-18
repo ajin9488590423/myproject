@@ -1,0 +1,15 @@
+body{
+    border: 1px dotted;
+    margin: auto;
+    width: 1135px;
+    height: 570px;
+    margin-left: 249px;
+    margin-top: 10px;
+}
+.img{
+    margin-top:-23px ;
+}
+p{
+    letter-spacing: 3px;
+    text-align: center;
+}

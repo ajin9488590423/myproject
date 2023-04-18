@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>addBook</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <form [formGroup]="PriceForm" (ngSubmit)="Add()">
+            <h1 class="h1">Add Book</h1>
+            <div class="lab1"><label>Book ID:</label></div>
+            <div class="in1"><input type="text" style="width: 200px; height: 25px;" formControlName="bookid"></div>
+            <span style="color: red;" *ngIf="bookid && bookid.invalid && bookid.touched">*The bookid field is not valid</span>
+            <div class="lab2"><label >Book Title:</label></div>
+            <div class="in2"><input type="text" style="width: 200px; height: 25px;" formControlName="bookTitle"></div>
+            <span style="color: red;" *ngIf="bookTitle && bookTitle.invalid && bookTitle.touched">*The bookTitle field is not valid</span>
+            <div class="lab3"><label >Book Desc:</label></div>
+            <div class="in3"><input type="text" style="width: 200px; height: 25px;" formControlName="bookdesc"></div>
+            <span style="color: red;" *ngIf="bookdesc && bookdesc.invalid && bookdesc.touched">*The bookdesc field is not valid</span>
+            <div class="lab4"><label >Author Name:</label></div>
+            <div class="in4"><input type="text" style="width: 200px; height: 25px;" formControlName="authorName"></div>
+            <span style="color: red;" *ngIf="authorName && authorName.invalid && authorName.touched">*The authorName field is not valid</span>
+            <div class="lab5"><label >No Of Book Available:</label></div>
+            <div class="in5"><input type="text" style="width: 200px; height: 25px;" formControlName="avaliable"></div>
+            <span style="color: red;" *ngIf="avaliable && avaliable.invalid && avaliable.touched">*The avaliable field is not valid</span>
+            <div class="btn"><input type="submit" class="btn btn-warning" value="Add Book" [disabled]="!PriceForm.valid" (click)="successAlert()"></div>   
+        </form>
+    </body>
+</html>

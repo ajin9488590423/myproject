@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>search book</title>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script> -->
+</head>
+    <body>
+        <form>
+            <h1 class="h1">Search Book</h1>
+           <div class="label"><label>Book Title:</label></div> 
+           <div class="input"> <input type="search" placeholder="Enter BookTitle" style="width: 200px; height: 30px;" 
+            name="bookTitle"[(ngModel)]="bookTitle" (ngModelChange)="Search()"></div>
+           <div  ><input type="button" value="Search" class="btn"></div>
+            <br/>
+            <table class="tab">
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>StartDate</th>
+                <th>Salary</th>
+                <!-- <th>Position</th> -->
+                <tr *ngFor="let s of searchList">
+                    <td>{{s.name}}</td>
+                    <td>{{s.position}}</td>
+                    <td>{{s.office}}</td>
+                    <td>{{s.age}}</td>
+                    <td>{{s.startDate}}</td>
+                    <td>{{s.salary}}</td>
+                    <td *ngIf="usrRol2=='user';then ifBlock elsek"></td>
+                    <ng-template #ifBlock>
+                        <label  style="color: blue; margin-top: 10px;">purchase</label>
+                    </ng-template>
+
+                    <td *ngIf="usrRol=='admin';then RedBlock else Block"></td>
+                    <ng-template #RedBlock>
+                        <img src="../../assets/pic/edit.png" style="width: 30px; cursor: pointer;" (click)="editProd(s.serachid)">
+                    </ng-template>
+                    <ng-template #Block>
+                       
+                    </ng-template>
+                    <td *ngIf="usrRol=='admin';then blueBlock else Blk"></td>
+                    <ng-template #blueBlock>
+                        <img src="../../assets/pic/trash.png" style="width: 30px; cursor: pointer;" (click)="deletePopup(s)">
+                    </ng-template>
+                    <ng-template #Blk>
+                      
+                    </ng-template>
+                </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+body{
+    border: 1px dotted;
+    margin: auto;
+    width: 1135px;
+    height: 570px;
+    margin-left: 249px;
+    margin-top: 10px;
+}
+form{
+    flex-direction: column;
+}
+.h1{
+    text-align: center;
+    margin-left: -869px;
+    margin-top: 30px;
+    margin-bottom: 58px;
+}
+.lab1{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.lab2{
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.lab3{
+    margin-top: 28px;
+    margin-left: 20px;
+}
+.lab4{
+    margin-top: 23px;
+    margin-left: 20px;
+}
+.lab5{
+    margin-top: 24px;
+    margin-left: 20px;
+}
+.btn{
+    margin-top: 10px;
+    margin-left: 105px;
+    border-radius: 20px;
+}
+.in1{
+    margin-top: -23px;
+    margin-left: 177px
+}
+.in2{
+    margin-top: -26px;
+    margin-left: 177px;
+}
+.in3{
+    margin-top: -26px;
+    margin-left: 177px;
+}
+.in4{
+    margin-top: -23px;
+    margin-left: 177px;
+}
+.in5{
+    margin-top: -24px;
+    margin-left: 177px;
+}
+span{
+    margin-left: 177px;
+}

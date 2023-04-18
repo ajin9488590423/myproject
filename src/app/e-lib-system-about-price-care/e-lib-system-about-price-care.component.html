@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>price card</title>
+    </head>
+    <body>
+        <form>
+            <h1>Price Card</h1>
+            <p>Late fee of Rs. 5/- per day per book would be charged from all the borrowers who retain book(s) beyond the due date. Director General/ Joint Secretary/ Librarian may exempt the late fee depending upon the circumstances of delay.</p>
+            <p>lendig fee will be one day it will be Rs.50</p>
+            <table class="tab">
+                <th>Book</th>
+                <th>Author</th>
+                <th>Name</th>
+                <th>Day</th>
+                <th>lending fee</th>
+                <th>Late fee</th>
+                <th>Total fee</th>
+                <tr *ngFor="let p of priceList" >
+                    <td>{{p.book}}</td>
+                    <td>{{p.authorName}}</td>
+                    <td>{{p.userName}}</td>
+                    <td>{{p.day}}</td>
+                    <td>{{p.latefee}}</td>
+                    <td>{{p.lendingfee}}</td>
+                    <td>{{p.totalPrice}}</td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
